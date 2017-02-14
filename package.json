@@ -1,0 +1,33 @@
+{
+    "scripts": {
+        "startNode": "node  back/app.js",
+        "startElect": "electron ./app ",
+        "start": "npm run startElect",
+        "dev": "NODE_ENV='development' npm run start",
+        "dist": "build --x64 "
+    },
+    "devDependencies": {
+        "electron-builder": "^10.5.0",
+        "electron-prebuilt": "^1.4.8"
+    },
+    "build": {
+        "appId": "az.company.student_payment",
+        "asar": false,
+        "app-category-type": "public.app-category.productivity",
+        "dmg": {
+            "contents": [{
+                "x": 110,
+                "y": 150
+            }, {
+                "x": 240,
+                "y": 150,
+                "type": "link",
+                "path": "/Applications"
+            }]
+        },
+        "win": {
+            "iconUrl": "http://eatodo.s3.amazonaws.com/icon.ico",
+            "loadingGif": "./build/install-spinner.gif"
+        }
+    }
+}

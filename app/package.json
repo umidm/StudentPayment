@@ -1,0 +1,8 @@
+{
+    "name": "student_payment",
+    "version": "1.0.0",
+    "description": "Sample Student Payment",
+    "main": "index.js",
+    "author": "umahmudov Umid Mahmudov <umid.ma@gmail.com>",
+    "license": "MIT"
+}

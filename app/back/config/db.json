@@ -1,0 +1,2 @@
+{"info":{"name":"Test","birthdate":"2013-12-03T20:00:00.000Z","course":"bachelor","package":1},"paymentInfo":{"sumOfPaids":70,"sumOfUnPaids":0,"monthlyPayment":70},"payments":[{"_id":"5e5b4301-18ae-4263-ac58-1a1bd6eaa0fd","paid":70,"paidDate":"2017-01-14T00:00:00.000Z","paidPackage":0,"fullPaid":true,"shouldPaid":0}],"_id":"jkyIhZYYIG7dnyME"}
+{"info":{"name":"su","birthdate":"2013-12-16T20:00:00.000Z","course":"master","package":1},"paymentInfo":{"monthlyPayment":70},"payments":[],"_id":"QADvOgATQF78Lq0F"}

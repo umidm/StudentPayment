@@ -1,0 +1,48 @@
+<div class="panel">
+    <div class="panel-body">
+        <form name="submitForm" novalidate>
+            <div class="form-group">
+                <label for="paid">Paid:{{id}}
+                </label>
+                <div class="input-group" id="paid">
+                    <span class="input-group-addon">$</span>
+                    <input type="number" ng-model="payment.paid" class="form-control" placeholder="150">
+                    <span class="input-group-addon">.00</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="paidDate">Paid Date:
+                </label>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" aria-label="..." ng-model="paidDateCheckbox">
+                    </span>
+                    <input type="date" ng-model="payment.paidDate" min="2013-12-31" class="form-control" aria-label="..." ng-disabled="paidDateCheckbox" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Unpaid">Unpaid:
+                </label>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" aria-label="..." ng-model="payment.fullPaid">
+                    </span>
+                    <input type="number" ng-model="payment.shouldPaid" class="form-control" aria-label="..." ng-disabled="payment.fullPaid" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Comment:
+                </label>
+                  <textarea class="form-control"  ng-model="payment.comment" rows="5" id="comment"></textarea>
+            </div>
+
+            <button type="submit" ng-click="submit()" ng-disabled="submitForm.$invalid" class="btn btn-default">
+                <i class="glyphicon glyphicon-ok"></i>
+                Apply
+            </button>
+        </form>
+    </div>
+</div>

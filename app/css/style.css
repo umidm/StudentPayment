@@ -1,0 +1,144 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/*
+    Created on : Jun 14, 2016, 12:15:52 PM
+    Author     : admin
+*/
+
+body {
+    padding-top: 70px;
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.table thead tr td {
+    font-weight: bold;
+}
+
+.thead-inverse th {
+    color: #fff;
+    background-color: #373a3c;
+}
+
+.ng-invalid.ng-dirty {
+    border-color: red
+}
+
+.ng-valid.ng-dirty {
+    border-color: green
+}
+
+.ng-pristine {
+    border-color: lightblue;
+}
+
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fix-left-parent {
+    min-height: 250px;
+}
+
+.fix-right-parent {
+    min-height: 250px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*max-height: 300px;
+    overflow-y: auto;*/
+}
+
+.fix-left-parent .fix {
+    position: fixed;
+    width: inherit;
+}
+
+.fix-right-parent .fix {
+    position: fixed;
+    width: inherit;
+    right: 15px;
+    max-height: 75%;
+    overflow: auto;
+}
+
+
+/*#scrollspy {
+    width: 120px;
+}
+
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}*/
+
+
+/*style="
+    --- left side
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    width: 450px;
+    */
+
+
+/*
+    style="
+    --center
+margin-left: 0px;
+left: 0450px;
+right: 287px;
+*/
+
+
+/*style="
+----- right side
+position: fixed;
+z-index: 1;
+border-right-width: 1px;
+margin-right: 12px;
+right: 0%;
+max-height: 1000px;
+overflow-y: auto;
+*/
+
+
+/*footer
+padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    color: #99979c;
+    text-align: center;
+    background-color: #2a2730;
+    position: initial;*/
+
+
+/*to;
+*/

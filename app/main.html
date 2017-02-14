@@ -1,0 +1,81 @@
+<html ng-app="App">
+
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/login.css" rel="stylesheet">
+
+<!-- dialog.css  -->
+    		<link rel="stylesheet" href="components/dialog/ng-dialogue.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="NavController">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"  href="#student">Home</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav" ng-show="showMenu">
+                        <li ng-class="{ active : isSet(1)}">
+                            <a ng-click="setTab(1)" href="#student">Students</a>
+                        </li>
+                            <li ng-class="{ active : isSet(2)}">
+                                <a ng-click="setTab(2)" href="#config">Beginning Date</a>
+                            </li>
+                        <li >
+                            <a ng-click="logout()" href="#/">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container-fluid">
+        <div ng-view></div>
+
+        </div>
+        <!-- /.container -->
+
+        <div class="container-fluid">
+
+            <hr>
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="pull-right">Copyright &copy; BroStudio</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="js/without_jquery.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular-route.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="pages/login/loginController.js"></script>
+        <script type="text/javascript" src="pages/student/studentController.js"></script>
+        <script type="text/javascript" src="pages/student_payment/paymentController.js"></script>
+        <script type="text/javascript" src="pages/config/configController.js"></script>
+        <script type="text/javascript" src="components/dialog/ngDialog.js"></script>
+    </body>
+
+</html>
+
+</html>

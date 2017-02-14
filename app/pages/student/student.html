@@ -1,0 +1,80 @@
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">Students
+                {{date.currentStartedDate | date }}
+                -
+                {{today | date }}</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="panel">
+        <div class="panel-heading">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-click="openAddStudentDialog()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    Add Student</button>
+            </div>
+            <div class="btn-group" role="group" ng-show="isItPayDate">
+                <button type="button" class="btn btn-default" ng-click="setAllStudentMonthPayCheck()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    Add Payment For All Students</button>
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover table-striped">
+                <thead >
+                    <tr class="sortable ">
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Package</th>
+                        <th>Birthdate</th>
+                        <th>Sum Paid</th>
+                        <th>Sum Un Paid</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr >
+                        <th><input ng-model="search.name"class="form-control" type="text"  disabled></th>
+                        <th><select ng-model="search.course" class="form-control" ng-options="p.id as p.name for p in courses  track by p.id"  disabled/></th>
+                        <th><select ng-model="search.package" class="form-control" ng-model="package"  ng-options="p.id as p.id for p in packages"  disabled/></th>
+                        <th><input ng-model="search.birthdate" class="form-control" type="date" disabled></th>
+                        <th><input ng-model="search.paid" class="form-control" type="number" disabled></th>
+                        <th><input ng-model="search.unpaid" class="form-control"  type="number"></th>
+                        <th>
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn btn-default" ng-click="getSearchedStudentList()">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="sortable" ng-repeat="student in studentList ">
+                        <td>{{student.info.name}}</td>
+                        <td>{{student.info.course}}</td>
+                        <td>{{student.info.package}}</td>
+                        <td>{{student.info.birthdate | date}}</td>
+                        <td>{{student.paymentInfo.sumOfPaids}}</td>
+                        <td>{{student.paymentInfo.sumOfUnPaids}}</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn btn-default" ng-click="studentPayments(student._id)">
+                                    <i class="glyphicon glyphicon-chevron-right"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <script type="text/ng-template" id="addStudent">
+                <div class="ngdialog-message">
+                    <add-student-dialogue></add-student-dialogue>
+                </div>
+            </script>
+
+        </div>
+    </div>
+</div>

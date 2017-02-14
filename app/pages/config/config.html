@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">Beginning Date
+                {{date.currentStartedDate | date }}
+                - Today: 
+                {{today | date }}</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+  <div class="panel">
+      <div class="panel-body">
+          <form name="submitForm" novalidate>
+
+                  <div class="form-group">
+                      <label for="beginnigDate">Start Date: </label>
+                      <input ng-model="date.activeConfigDate" type="date"  id="beginnigDate" placeholder="yyyy-MM-dd" class="form-control" required>
+                  </div>
+
+              <button type="submit" ng-click="submit()" ng-disabled="submitForm.$invalid" class="btn btn-default">
+                  <i class="glyphicon glyphicon-ok"></i>
+                  Apply
+              </button>
+          </form>
+      </div>
+  </div>
+</div>
